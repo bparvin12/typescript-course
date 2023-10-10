@@ -1,7 +1,7 @@
 // interface: creates a new type, describing the 
 // property names and value types of an object
 
-interface Vehicle {
+interface VehicleBase {
   name: string;
   year: Date;
   broken: boolean;
@@ -30,25 +30,25 @@ const drink2 = {
 }
 
 // before interface
-// const printVehicle = (vehicle: {
+// const printVehicleBase = (vehicleBase: {
 //   name: string;
 //   year: number;
 //   broken: boolean;
 // }): void => {
-//   console.log(`Name: ${vehicle.name}`);
-//   console.log(`Year: ${vehicle.year}`);
-//   console.log(`Broken: ${vehicle.broken}`);
+//   console.log(`Name: ${vehicleBase.name}`);
+//   console.log(`Year: ${vehicleBase.year}`);
+//   console.log(`Broken: ${vehicleBase.broken}`);
 // };
 
-// printVehicle(oldCivic);
+// printVehicleBase(oldCivic);
 
 // after interface
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`);
-    console.log(`Year: ${vehicle.year}`);
-    console.log(`Broken: ${vehicle.broken}`)
+const printVehicleBase = (vehicleBase: VehicleBase): void => {
+  console.log(`Name: ${vehicleBase.name}`);
+    console.log(`Year: ${vehicleBase.year}`);
+    console.log(`Broken: ${vehicleBase.broken}`)
 };
-printVehicle(oldCivic);
+printVehicleBase(oldCivic);
 
 
 const printSummary = (item: Reportable): void => {
